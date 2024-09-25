@@ -1,0 +1,25 @@
+[profile.default]
+src = "src"
+out = "out"
+test = "test"
+libs = ["lib"]
+fs_permissions = [{ access = "read", path = "./" }]
+solc = "0.8.20"
+evm_version = 'paris'
+
+[rpc_endpoints]
+base = "https://mainnet.base.org"
+base_sepolia = "https://sepolia.base.org"
+base_goerli = "https://goerli.base.org"
+lachain = "https://rpc1.mainnet.lachain.network"
+
+[etherscan]
+base = { key = "${BLOCK_EXPLORER_API_KEY}" }
+base_sepolia = { key = "${BLOCK_EXPLORER_API_KEY}" }
+base_goerli = { key = "${BLOCK_EXPLORER_API_KEY}" }
+
+[profile.dependencies]
+uniswap-v2-core = { git = "https://github.com/Uniswap/v2-core.git", tag = "v1.0.1" }
+uniswap-v2-periphery = { git = "https://github.com/Uniswap/v2-periphery.git", tag = "v1.1.0" }
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
